@@ -7,7 +7,7 @@ phases:
       - timeout 15 sh -c "until docker info; do echo waiting for docker; sleep 1; done"
   pre_build:
     commands:
-      - printf "%s" Jidnyesh1210 | docker login --username jidnyesh0149 --password-stdin
+      - printf "%s" Jidnyesh@1210 | docker login --username jidnyesh0149 --password-stdin
   build:
     commands:
       - cd backend
