@@ -6,7 +6,7 @@ phases:
       - echo Installing Docker...
   pre_build:
     commands:
-      - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
   build:
     commands:
       - cd backend
